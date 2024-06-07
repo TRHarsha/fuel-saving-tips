@@ -4,8 +4,8 @@ import random
 import google.generativeai as genai
 import pyttsx3
 
-# Directly set the API key
-api_key = 'AIzaSyCSblJhwW5i44o0-S_ltouuW4X8C2dSjXU'  # Replace with your actual API key
+# Retrieve the API key from Streamlit secrets
+api_key = st.secrets["GOOGLE_API_KEY"]  # Replace with your actual API key
 
 if not api_key:
     raise ValueError("API key not found. Please set the GOOGLE_API_KEY in the script.")
